@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Jersey 10", sans-serif;
+    overflow: hidden;
+    background-image: url('../../files/img/background-fase_01_praia.jpeg');
+    background-size: contain;
+    background-size: 90% 100%;
+}
+
+.game-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 130px;
+}
+
+.box-name {
+    background-color: #FFD94D;
+    margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.box-title {
+    margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.box-time {
+    background-color: #FFD94D;
+    margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+span {
+    color: black;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.title-span1 {
+    color: #059C42;
+}
+
+.title-span2 {
+    color: #FFFFCC;
+}
