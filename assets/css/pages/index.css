@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Jersey 10", sans-serif;
+    overflow: hidden;
+    background-image: url('../../files/img/background-index.jpeg');
+    /* background-size: contain; */
+    background-size: contain;
+    background-size: 70% 120%;
+}
+
+.section-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40vh;
+}
+
+.title h1 {
+    color: #004DFF;
+    font-size: 7rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    min-height: 290px;
+}
+
+.controls button,
+input {
+    font-family: "Jersey 10", sans-serif;
+    background-color: #004DFF;
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+.input-name {
+    padding: 10px 30px 10px 30px;
+    font-size: 2em;
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.input-name::placeholder {
+    color: #FFF;
+}
+
+.btn-play {
+    padding: 20px 90px 20px 90px;
+    font-size: 5rem;
+    width: 480px;
+    height: 145px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.btn-play:hover {
+    background-color: #00ff44;
+    color: black;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #005f19;
+    transition: all 0.3s;
+}
+
+.btn-play:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ffffff;
+    transition: all 0.2s;
+}
+
+.btn-menu {
+    padding: 10px 30px 10px 30px;
+    font-size: 2rem;
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: #00ff44;
+    color: black;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #005f19;
+    transition: all 0.3s;
+}
+
+.btn-menu:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ffffff;
+    transition: all 0.2s;
+}
