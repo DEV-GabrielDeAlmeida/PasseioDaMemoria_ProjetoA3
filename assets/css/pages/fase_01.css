@@ -5,7 +5,7 @@ html {
     width: 100%;
     font-family: "Jersey 10", sans-serif;
     overflow: hidden;
-    background-image: url('../../files/img/background-fase_01_praia.jpeg');
+    background-image: url('../../files/img/backgrounds/background-fase_01_praia.jpeg');
     background-size: contain;
     background-size: 90% 100%;
 }
