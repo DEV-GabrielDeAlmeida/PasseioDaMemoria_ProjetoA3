@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="./assets/css/pages/index.css">
+
+    <script defer src="./assets/js/pages/index.js"></script>
 </head>
 
 <body>
@@ -15,14 +17,16 @@
             <h1>Passeio da Memória</h1>
         </div>
         <!-- Área de Interação -->
-        <div class="controls">
-            <input class="input-name" type="text" placeholder="Digite seu nome...">
-            <a href="./html/fase_01_praia.html">
-                <button class="btn-play">Play!</button>
-            </a>
-            <a href="#">
-                <button class="btn-menu">Menu de Fases</button>
-            </a>
+        <form class="form-name">
+            <div class="controls">
+                <input class="input-name" type="text" placeholder="Digite seu nome..." required>
+                <a href="./html/fase_01_praia.html">
+                    <button type="submit" class="btn-play" disabled>Play!</button>
+                </a>
+        </form>
+        <a href="#">
+            <button class="btn-menu" disabled>Menu de Fases</button>
+        </a>
         </div>
     </section>
 </body>

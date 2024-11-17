@@ -5,7 +5,7 @@ html {
     width: 100%;
     font-family: "Jersey 10", sans-serif;
     overflow: hidden;
-    background-image: url('../../files/img/background-index.jpeg');    
+    background-image: url('../../files/img/backgrounds/background-index.jpeg');
     background-size: contain;
     background-size: 70% 120%;
 }
@@ -78,6 +78,12 @@ input {
     transition: all 0.2s;
 }
 
+.btn-play:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: none;
+}
+
 .btn-menu {
     padding: 10px 30px 10px 30px;
     font-size: 2rem;
@@ -100,4 +106,10 @@ input {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em #ffffff;
     transition: all 0.2s;
+}
+
+.btn-menu:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: none;
 }
