@@ -56,3 +56,58 @@ span {
 .title-span2 {
     color: #FFFFCC;
 }
+
+/*                  */
+/* CONTEÚDO DO GAME */
+/*                  */
+
+.game-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: aqua;
+}
+
+.card {
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-color: #333;
+    border-radius: 20px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: solid 2px #000000;
+    border-radius: 20px;
+}
+
+.front {
+    background-image: url('../../files/img/puzzels01/sunset01.png');
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url('../../files/img/backgrounds/background-fase_01_praia.jpeg');
+    backface-visibility: hidden;
+}
