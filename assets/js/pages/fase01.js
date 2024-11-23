@@ -9,19 +9,46 @@ window.onload = () => {
 // Função para gerar as cartas
 const grid = document.querySelector(".grid");
 
-const createCard = () => {
-  const card = document.createElement("div");
-  const front = document.createElement("div");
-  const back = document.createElement("div");
+const puzzles = [
+  'sunset01',
+  'sunset02',
+  'sunset03',
+  'sunset04',
+  'sunset05',
+  'sunset06',
+];
 
-  card.className = "card";
-  front.className = "face front";
-  back.className = "face back";
+const createElement = (tag, className) => {
+  const element = document.createElement(tag);
+  element.className = className;
+  return element;
+}
+
+const createCard = (puzzle) => {
+  const card = createElement("div", "card");
+  const front = createElement("div", "face front");
+  const back = createElement("div", "face back");
+
+  // front.style.backgroundImage = `url('../../files/img/puzzels01/${puzzle}.png')`;
+  front.style.backgroundImage = `url('/assets/files/img/puzzels01/${puzzle}.png')`;
 
   card.appendChild(front);
   card.appendChild(back);
 
-  grid.appendChild(card);
+  return card;
 };
 
-createCard()
+const loadGame = () => {
+  const duplicatePuzzles = [...puzzles, ...puzzles];
+
+  const shuffledArray = duplicatePuzzles.sort();
+
+  duplicatePuzzles.forEach((puzzle) => {
+
+    const card = createCard(puzzle);
+    grid.appendChild(card);
+
+  });
+}
+
+loadGame();

@@ -98,12 +98,11 @@ span {
     position: absolute;
     background-size: cover;
     background-position: center;
-    border: solid 2px #000000;
+    /* border: solid 2px #000000; */
     border-radius: 20px;
 }
 
-.front {
-    background-image: url('../../files/img/puzzels01/sunset01.png');
+.front {        
     transform: rotateY(180deg);
 }
 
