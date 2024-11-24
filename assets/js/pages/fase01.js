@@ -28,7 +28,9 @@ const checkEndGame = () => {
     // INSERIR O QUE DEVE APARECER AO VENCER O JOGO
     setTimeout(() => {
       clearInterval(this.loop);
-      alert(`Parabéns, ${playerSpan.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos.`);
+      alert(
+        `Parabéns, ${playerSpan.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos.`
+      );
     }, 500);
   }
 };
@@ -103,6 +105,14 @@ const startTimer = () => {
   this.loop = setInterval(() => {
     const tempoAtual = Number(timer.innerHTML);
     timer.innerHTML = tempoAtual + 1;
+
+    if (tempoAtual <= 30) {
+      console.log("cor verde");
+    } else if (tempoAtual > 30 && tempoAtual <= 60) {
+      console.log("cor laranja");
+    } else if (tempoAtual > 60) {
+      console.log("cor vermelha");
+    }
   }, 1000);
 };
 
