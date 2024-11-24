@@ -97,9 +97,9 @@ span {
     left: 7px;
 }
 
-.desligaCarta {
+/* .desligaCarta {
     opacity: 0.5;
-}
+} */
 
 .face {
     width: 100%;
@@ -107,9 +107,18 @@ span {
     position: absolute;
     background-size: cover;
     border: solid 4px #000000;
-    background-color: #059c417a;
+    background-color: #059c41aa;
     border-radius: 20px;
     transition: all 900ms ease;
+}
+
+.desligaCarta {
+    opacity: 0.3;
+    border: none;
+}
+
+.desligaCarta:hover {
+    opacity: 1;
 }
 
 .front {

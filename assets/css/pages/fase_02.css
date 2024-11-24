@@ -92,9 +92,9 @@ span {
     transform: rotateY(180deg);
 }
 
-.desligaCarta {
+/* .desligaCarta {
     opacity: 0.5;
-}
+} */
 
 .face {
     width: 100%;
@@ -105,6 +105,15 @@ span {
     border: solid 4px #000000;
     border-radius: 20px;
     transition: all 900ms ease;
+}
+
+.desligaCarta {
+    opacity: 0.3;
+    border: none;
+}
+
+.desligaCarta:hover {
+    opacity: 0.9;
 }
 
 .front {
