@@ -4,7 +4,7 @@ html {
     height: 100%;
     width: 100%;
     font-family: "Jersey 10", sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-image: url('../../files/img/backgrounds/background-fase_01_praia.jpeg');
     background-size: contain;
     background-size: 90% 100%;
@@ -88,7 +88,7 @@ span {
     transform-style: preserve-3d;
 }
 
-.card:hover {
+.viraCarta {
     transform: rotateY(180deg);
 }
 
@@ -102,7 +102,7 @@ span {
     border-radius: 20px;
 }
 
-.front {        
+.front {
     transform: rotateY(180deg);
 }
 

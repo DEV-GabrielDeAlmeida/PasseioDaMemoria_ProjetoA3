@@ -10,19 +10,53 @@ window.onload = () => {
 const grid = document.querySelector(".grid");
 
 const puzzles = [
-  'sunset01',
-  'sunset02',
-  'sunset03',
-  'sunset04',
-  'sunset05',
-  'sunset06',
+  "sunset01",
+  "sunset02",
+  "sunset03",
+  "sunset04",
+  "sunset05",
+  "sunset06",
 ];
 
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
   element.className = className;
   return element;
-}
+};
+
+let firstCard = "";
+let secondCard = "";
+
+const comparaCarta = () => {
+  const firstPuzzle = firstCard.getAttribute("data-puzzle");
+  const secondPuzzle = secondCard.getAttribute("data-puzzle");
+
+  if (firstPuzzle === secondPuzzle) {
+    console.log("acertou!");
+  } else {
+    setTimeout(() => {
+      firstCard.classList.remove("viraCarta");
+      secondCard.classList.remove("viraCarta");
+
+      firstCard = "";
+      secondCard = "";
+    }, 500);
+  }
+};
+
+const revelaCarta = ({ target }) => {
+  if (target.parentNode.className.includes("viraCarta")) {
+    return;
+  }
+
+  if (firstCard === "") {
+    target.parentNode.classList.add("viraCarta");
+    firstCard = target.parentNode;
+  } else if (secondCard === "") {
+    target.parentNode.classList.add("viraCarta");
+    secondCard = target.parentNode;
+  }
+};
 
 const createCard = (puzzle) => {
   const card = createElement("div", "card");
@@ -35,20 +69,21 @@ const createCard = (puzzle) => {
   card.appendChild(front);
   card.appendChild(back);
 
+  card.addEventListener("click", revelaCarta);
+  card.setAttribute("data-puzzle", puzzle);
+
   return card;
 };
 
 const loadGame = () => {
   const duplicatePuzzles = [...puzzles, ...puzzles];
 
-  const shuffledArray = duplicatePuzzles.sort();
+  const shuffledArray = duplicatePuzzles.sort(() => Math.random() - 0.5);
 
-  duplicatePuzzles.forEach((puzzle) => {
-
+  shuffledArray.forEach((puzzle) => {
     const card = createCard(puzzle);
     grid.appendChild(card);
-
   });
-}
+};
 
 loadGame();
