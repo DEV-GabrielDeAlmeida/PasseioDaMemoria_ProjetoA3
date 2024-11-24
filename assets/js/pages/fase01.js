@@ -6,7 +6,7 @@ window.onload = () => {
   playerSpan.innerHTML = playerGet;
 };
 
-// Função para gerar as cartas
+// Função para funcionar o jogo
 const grid = document.querySelector(".grid");
 
 const puzzles = [
@@ -30,7 +30,7 @@ let secondCard = "";
 const checkEndGame = () => {
   const cartasViradas = document.querySelectorAll(".desligaCarta");
 
-  if (cartasViradas.length === 12) {
+  if (cartasViradas.length === puzzles.length*2) {
     // INSERIR O QUE DEVE APARECER AO VENCER O JOGO
     setTimeout(() => {
       alert("Parabens!");
