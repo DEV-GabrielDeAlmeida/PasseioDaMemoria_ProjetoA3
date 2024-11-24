@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Jersey 10", sans-serif;
+    overflow: hidden;
+}
+
+.section-game {
+    height: 100vh;
+}
+
+/* CABEÇALHO */
+.game-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+}
+
+.box-name {
+    background-color: #FFD94D;
+    color: black;
+    width: 320px;
+    font-size: 2em;
+    max-height: 60px;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    transition: all 400ms ease;
+}
+
+.box-name:hover {
+    box-shadow: 0 20px 30px 0 #ffd84d8e;
+}
+
+.box-name a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+
+/* TÍTULO */
+.game-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.subTitle {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.title h1 {
+    color: #004DFF;
+    font-size: 7rem;
+}
+
+.subTitle h2 {
+    color: #004DFF;
+    font-size: 3rem;
+}
+
+/* ÁREA DE INTERAÇÃO */
+.fase-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 300px;
+    width: 100%;
+}
+
+.fase-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fase-title {
+    font-size: 2rem;
+}
+
+.fase-img {
+    height: 130px;
+    width: 130px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 4px solid #333;
+}
+
+.img01 {
+    background-image: url('../../files/img/backgrounds/background-fase_01_praia.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img02 {
+    background-image: url('../../files/img/backgrounds/background-fase_02_poloNorte.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img03 {
+    background-image: url('../../files/img/backgrounds/background-fase_03_china.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.img04 {
+    background-image: url('../../files/img/backgrounds/background-fase_04_mexico.jpg');
+    background-size: cover;
+}
+
+.img05 {
+    background-image: url('../../files/img/backgrounds/background-fase_05_eua.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img06 {
+    background-image: url('../../files/img/backgrounds/background-fase_06_brasil.jpeg');
+    background-size: cover;
+}
+
+.fase-btn {
+    background-color: #004DFF;
+    color: #FFF;
+    width: 130px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.fase-btn:hover {
+    box-shadow: 0 10px 10px 0 #004cffa6;
+}
+
+a {
+    text-decoration: none;
+}
