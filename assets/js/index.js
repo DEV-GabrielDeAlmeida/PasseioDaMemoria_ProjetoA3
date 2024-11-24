@@ -8,11 +8,10 @@ const validateInput = ({ target }) => {
   if (target.value.length > 0) {
     btnPlay.removeAttribute("disabled");
     btnMenu.removeAttribute("disabled");
-    return;
+  } else {
+    btnPlay.setAttribute("disabled", "");
+    btnMenu.setAttribute("disabled", "");
   }
-
-  btnPlay.setAttribute("disabled", "true");
-  btnMenu.setAttribute("disabled", "");
 };
 
 const handleSubmit = (event) => {
