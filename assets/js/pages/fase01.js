@@ -27,12 +27,29 @@ const createElement = (tag, className) => {
 let firstCard = "";
 let secondCard = "";
 
+const checkEndGame = () => {
+  const cartasViradas = document.querySelectorAll(".desligaCarta");
+
+  if (cartasViradas.length === 12) {
+    // INSERIR O QUE DEVE APARECER AO VENCER O JOGO
+    setTimeout(() => {
+      alert("Parabens!");
+    }, 500);
+  }
+};
+
 const comparaCarta = () => {
   const firstPuzzle = firstCard.getAttribute("data-puzzle");
   const secondPuzzle = secondCard.getAttribute("data-puzzle");
 
   if (firstPuzzle === secondPuzzle) {
-    console.log("acertou!");
+    firstCard.firstChild.classList.add("desligaCarta");
+    secondCard.firstChild.classList.add("desligaCarta");
+
+    firstCard = "";
+    secondCard = "";
+
+    checkEndGame();
   } else {
     setTimeout(() => {
       firstCard.classList.remove("viraCarta");
@@ -55,6 +72,8 @@ const revelaCarta = ({ target }) => {
   } else if (secondCard === "") {
     target.parentNode.classList.add("viraCarta");
     secondCard = target.parentNode;
+
+    comparaCarta();
   }
 };
 

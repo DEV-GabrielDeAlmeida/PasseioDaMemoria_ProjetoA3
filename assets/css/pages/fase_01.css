@@ -4,7 +4,7 @@ html {
     height: 100%;
     width: 100%;
     font-family: "Jersey 10", sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-image: url('../../files/img/backgrounds/background-fase_01_praia.jpeg');
     background-size: contain;
     background-size: 90% 100%;
@@ -14,22 +14,26 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 130px;
+    align-items: center;
+    height: 100px;
 }
 
 .box-name {
     background-color: #FFD94D;
     margin-top: 20px;
     width: 250px;
-    height: 60px;
+    max-height: 60px;
+    padding: 10px;
     border-radius: 30px;
     text-align: center;
+    overflow-y: auto;
 }
 
 .box-title {
-    margin-top: 20px;
+    margin-top: 5px;
     width: 250px;
     height: 60px;
+    padding: 10px;
     border-radius: 30px;
     text-align: center;
 }
@@ -64,32 +68,36 @@ span {
 .game-body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: red;
+    align-items: center;    
 }
 
 .grid {
     display: grid;
+    justify-content: center;
+    align-items: center;    
     grid-template-columns: 120px 120px 120px;
-    gap: 15px;
+    gap: 25px 90px;
     width: 100%;
     max-width: 800px;
-    margin: 100px auto;
-    background-color: aqua;
+    margin: 0 auto;
+    padding: 20px;    
 }
 
 .card {
     aspect-ratio: 1/1;
     width: 100%;
-    background-color: #333;
     border-radius: 20px;
     position: relative;
     transition: all 400ms ease;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d;    
 }
 
 .viraCarta {
     transform: rotateY(180deg);
+}
+
+.desligaCarta {
+    opacity: 0.5;    
 }
 
 .face {
@@ -98,8 +106,9 @@ span {
     position: absolute;
     background-size: cover;
     background-position: center;
-    /* border: solid 2px #000000; */
+    border: solid 4px #000000;
     border-radius: 20px;
+    transition: all 900ms ease;
 }
 
 .front {

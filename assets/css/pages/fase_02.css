@@ -14,22 +14,26 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 130px;
+    align-items: center;
+    height: 100px;
 }
 
 .box-name {
     background-color: #FFD94D;
     margin-top: 20px;
     width: 250px;
-    height: 60px;
+    max-height: 60px;
+    padding: 10px;
     border-radius: 30px;
     text-align: center;
+    overflow-y: auto;
 }
 
 .box-title {
-    margin-top: 20px;
-    width: 314px;
+    margin-top: 5px;
+    width: 250px;
     height: 60px;
+    padding: 10px;
     border-radius: 30px;
     text-align: center;
 }
