@@ -53,6 +53,10 @@ span {
     font-weight: 500;
 }
 
+.timer-span {
+    font-size: 1em;
+}
+
 .title-span1 {
     color: #059C42;
 }

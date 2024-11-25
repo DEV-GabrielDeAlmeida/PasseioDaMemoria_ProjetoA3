@@ -1,0 +1,1 @@
+const btnPlay = document.querySelector(".btn-play");

@@ -21,5 +21,13 @@ const handleSubmit = (event) => {
   window.location = "html/fase_01_praia.html";
 };
 
+const handleSubmit2 = (event) => {
+  event.preventDefault();
+
+  localStorage.setItem("playerName", input.value);
+  window.location = "html/menu_fases.html";
+};
+
 input.addEventListener("input", validateInput);
 form.addEventListener("submit", handleSubmit);
+btnMenu.addEventListener("submit", handleSubmit2);

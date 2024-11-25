@@ -1,12 +1,7 @@
-const playerSpan = document.querySelector(".player-span");
-
-window.onload = () => {
-  const playerGet = localStorage.getItem("playerName");
-
-  playerSpan.innerHTML = playerGet;
-};
 // Função para funcionar o jogo
 const grid = document.querySelector(".grid");
+const playerSpan = document.querySelector(".player-span");
+const timer = document.querySelector(".timer-span");
 
 const puzzles = [
   "br01",
@@ -38,7 +33,10 @@ const checkEndGame = () => {
   if (cartasViradas.length === puzzles.length * 2) {
     // INSERIR O QUE DEVE APARECER AO VENCER O JOGO
     setTimeout(() => {
-      alert("Parabens!");
+      clearInterval(this.loop);
+      alert(
+        `Parabéns, ${playerSpan.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos.`
+      );
     }, 500);
   }
 };
@@ -87,7 +85,6 @@ const createCard = (puzzle) => {
   const front = createElement("div", "face front");
   const back = createElement("div", "face back");
 
-  // front.style.backgroundImage = `url('../../files/img/puzzels01/${puzzle}.png')`;
   front.style.backgroundImage = `url('/assets/files/img/puzzels06/${puzzle}.png')`;
 
   card.appendChild(front);
@@ -110,4 +107,25 @@ const loadGame = () => {
   });
 };
 
-loadGame();
+const startTimer = () => {
+  this.loop = setInterval(() => {
+    const tempoAtual = Number(timer.innerHTML);
+    timer.innerHTML = tempoAtual + 1;
+
+    if (tempoAtual <= 30) {
+      console.log("cor verde");
+    } else if (tempoAtual > 30 && tempoAtual <= 60) {
+      console.log("cor laranja");
+    } else if (tempoAtual > 60) {
+      console.log("cor vermelha");
+    }
+  }, 1000);
+};
+
+window.onload = () => {
+  const playerGet = localStorage.getItem("playerName");
+  playerSpan.innerHTML = playerGet;
+
+  startTimer();
+  loadGame();
+};
