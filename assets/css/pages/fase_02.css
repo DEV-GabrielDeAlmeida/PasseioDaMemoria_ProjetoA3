@@ -90,6 +90,7 @@ span {
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .viraCarta {
@@ -123,4 +124,79 @@ span {
 .back {
     background-image: url('../../files/img/backgrounds/background-fase_02_poloNorte.jpeg');
     backface-visibility: hidden;
+}
+
+/* RODAPÉ */
+.game-footer {
+    display: flex;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #004DFF;
+    height: 133px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.box-btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 133px;
+}
+
+.box-btn a,
+button {
+    font-family: "Jersey 10", sans-serif;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.fase-btn {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 3px;
+    transition: all 600ms ease;
+}
+
+.fase-btn:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em #4a4a4a;
+    transition: all 0.3s;
+}
+
+.fase-btn:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em #ffffff;
+    transition: all 0.2s;
+}
+
+.btn-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 3px solid #333;
+}
+
+.img01 {
+    background-image: url('../../files/img/backgrounds/background-index.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img02 {
+    background-image: url('../../files/img/backgrounds/background-fase_02_poloNorte.jpeg');
+    background-size: cover;
+}
+
+.img03 {
+    background-image: url('../../files/img/backgrounds/background-fase_03_china.png');
+    background-size: cover;
+    background-position: center;
 }
