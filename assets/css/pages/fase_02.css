@@ -4,7 +4,7 @@ html {
     height: 100%;
     width: 100%;
     font-family: "Jersey 10", sans-serif;
-    overflow: hidden;
+    overflow: auto;
     background-image: url('../../files/img/backgrounds/background-fase_02_poloNorte.jpeg');
     background-size: cover;
     background-size: 100% 100%;
