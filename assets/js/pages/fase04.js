@@ -2,6 +2,7 @@
 const grid = document.querySelector(".grid");
 const playerSpan = document.querySelector(".player-span");
 const timer = document.querySelector(".timer-span");
+const footer = document.querySelector(".game-footer");
 
 const puzzles = [
   "mex01",
@@ -37,6 +38,7 @@ const checkEndGame = () => {
       alert(
         `Parabéns, ${playerSpan.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos.`
       );
+      footer.style.display = "flex";
     }, 500);
   }
 };
