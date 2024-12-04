@@ -3,6 +3,7 @@ const grid = document.querySelector(".grid");
 const playerSpan = document.querySelector(".player-span");
 const timer = document.querySelector(".timer-span");
 const footer = document.querySelector(".game-footer");
+const playAgain = document.getElementById("playAgain");
 
 const puzzles = [
   "sunset01",
@@ -29,10 +30,24 @@ const checkEndGame = () => {
     // INSERIR O QUE DEVE APARECER AO VENCER O JOGO
     setTimeout(() => {
       clearInterval(this.loop);
-      alert(
-        `Parabéns, ${playerSpan.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos.`
-      );
+
+      // Criação de uma div para exibir a mensagem
+      const mensagemDiv = createElement("div", "mensagem-vitoria");
+      mensagemDiv.innerHTML = `
+        <h2>VOCÊ CONSEGUIU !!</h2>
+        <h2>Parabéns, ${playerSpan.innerHTML}!</h2>
+        <p>Seu tempo foi de <strong>${timer.innerHTML} segundos</strong>.</p>
+        <h4>⬇️⬇️⬇️</h4>
+      `;
+
+      // Estilize a div conforme necessário via CSS
+      document.body.appendChild(mensagemDiv);
+
       footer.style.display = "flex";
+
+      playAgain.addEventListener("click", function () {
+        location.reload();
+      });
     }, 500);
   }
 };

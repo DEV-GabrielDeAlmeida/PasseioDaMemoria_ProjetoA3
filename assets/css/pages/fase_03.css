@@ -129,6 +129,26 @@ span {
     backface-visibility: hidden;
 }
 
+.mensagem-vitoria {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 2.3rem;
+    text-align: center;
+    z-index: 1000;
+    transition: all 900ms ease;
+}
+
+.mensagem-vitoria:hover {
+    opacity: 10%;
+}
+
+
 /* RODAPÉ */
 .game-footer {
     display: flex;
@@ -195,10 +215,10 @@ button {
 
 .img02 {
     background-image: url('../../files/img/backgrounds/background-fase_03_china.png');
-    background-size: cover;    
+    background-size: cover;
 }
 
 .img03 {
     background-image: url('../../files/img/backgrounds/background-fase_04_mexico.jpg');
-    background-size: cover;    
+    background-size: cover;
 }
